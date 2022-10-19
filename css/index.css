@@ -1,0 +1,91 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body::-webkit-scrollbar { display: none; }
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+#header {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	display: flex;
+	background-color: white;
+	/*border: 1px solid black;*/
+	justify-content: space-between;
+	align-items: center;
+}
+
+#menubar {
+	display: none;
+}
+
+.logo {
+	margin: 20px 70px;
+}
+
+.navbar {
+	display: flex;
+}
+
+.lists {
+	padding: 15px 20px;
+}
+
+.lists a {
+	color: black;
+}
+
+#main {
+	padding-top: 80px;
+}
+
+.blogDiv {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 90%;
+	margin: auto;
+}
+
+.blogs {
+	width: 100%;
+}
+
+.img {
+	width: 100%;
+}
+
+.img img {
+	width: 100%;
+	height: 300px;
+}
+
+.titles {
+	font-size: 20px;
+    padding: 10px 0px;
+}
+
+.titles a {
+	color: black;
+}
+
+.discs{
+	font-size: 15px;
+}
+
+.dates{
+	padding: 5px 0px;
+    font-weight: bold;
+}

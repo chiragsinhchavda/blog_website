@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../register/register.css">
+	<title>Register</title>
+</head>
+
+<body>
+	<header id="header">
+		<span id="menubar"></span>
+		<div class="logo">
+			<h1>Blog Application</h1>
+		</div>
+		<nav class="navbar">
+			<li class="lists"><a href="/">HOME</a></li>
+			<li class="lists"><a href="#">CONTACT</a></li>
+			<li class="lists"><a href="../login/login.html">LOGIN</a></li>
+			<li class="lists"><a href="./register.html">REGISTER</a></li>
+		</nav>
+	</header>
+	<div class="main">
+		<span id="msg"></span>
+		<div class="registerDiv" id="register">
+			<div class="header">
+				<h1>Register</h1>
+			</div>
+			<form onsubmit="validateValues(event)" class="registerForm" name="registerForm" >
+				<div class="inputDiv">
+					<input placeholder="Email" class="input" type="text" name="email" id="email">
+					<span id="emailSpan"></span>
+				</div>
+				<div class="inputDiv">
+					<input placeholder="Password" class="input" type="text" name="password" id="password">
+					<span id="passwordSpan"></span>
+				</div>
+				<div class="inputDiv">
+					<input placeholder="Confirm Password" class="input" type="text" name="password" id="cpassword">
+					<span id="cpasswordSpan"></span>
+				</div>
+				<div class="btnDiv">
+					<button type="submit">Register</button>
+				</div>
+				<div class="btnDiv">
+					<a href="../login/login.html">Already Registered?</a>
+				</div>
+				<div class="orDiv">
+					<div class="or"></div>
+					<div>OR</div>
+					<div class="or"></div>
+				</div>
+				<div class="btnDiv googleLogin">
+					<button type="button">Register with google</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://kit.fontawesome.com/c84fea32b5.js" crossorigin="anonymous"></script>
+	<script src="./register.js"></script>
+</body>
+
+</html>
