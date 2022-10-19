@@ -1,0 +1,58 @@
+@media only screen and (max-width:767px) {
+	#header {
+		height: 10vh;
+	}
+
+	.blogDiv {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	#menubar {
+		position: absolute;
+		display: block;
+		right: 15px;
+		z-index: 1;
+	}
+
+	#menubar i {
+		font-size: 30px;
+
+	}
+
+	#heading {
+		display: none;
+		margin: 0px 20px
+	}
+
+	#nav {
+		position: absolute;
+		display: none;
+		left: 10px;
+		width: 100%;
+	}
+
+	.lists {
+		font-size: 13px;
+		padding: 9px 8px;
+	}
+
+	.input {
+		width: 70%;
+	}
+
+	.forgotLink a {
+		left: 58px;
+	}
+
+	.btnDiv button {
+		width: 75%;
+	}
+
+	.btnDiv a {
+		padding: 8px 90px;
+	}
+
+	.or {
+		width: 32%;
+	}
+}

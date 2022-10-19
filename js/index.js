@@ -1,11 +1,21 @@
-console.log('iamindex...')
+const nav = document.getElementById("nav");
+const navHeader = document.getElementById("heading");
 const url = 'https://newsdata.io/api/1/news?apikey=pub_124521cf6b5ef974097cf399bfedca944300d&q=technology&country=in&language=en&category=technology';
+
+function showMenu() {
+	if (nav.style.display == "none") {
+		nav.style.display = "flex";
+		navHeader.style.display = "none";
+	} else {
+		nav.style.display = "none";
+		navHeader.style.display = "block";
+	}
+}
 
 let req = new Request(url);
 fetch(req)
 	.then(function (response) {
 		let data = response.json();
-		console.log(data)
 		data.then(
 			getData => {
 				let results = getData.results;

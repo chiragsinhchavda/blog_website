@@ -9,16 +9,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../register/register.css">
+	<link rel="stylesheet" href="./responsive.css">
 	<title>Register</title>
 </head>
 
 <body>
 	<header id="header">
-		<span id="menubar"></span>
-		<div class="logo">
+		<span id="menubar" onclick="showMenu()"><i class="fa-solid fa-bars"></i></span>
+		<div id="heading" class="logo">
 			<h1>Blog Application</h1>
 		</div>
-		<nav class="navbar">
+		<nav id="nav" class="navbar">
 			<li class="lists"><a href="/">HOME</a></li>
 			<li class="lists"><a href="#">CONTACT</a></li>
 			<li class="lists"><a href="../login/login.html">LOGIN</a></li>
@@ -48,7 +49,7 @@
 					<button type="submit">Register</button>
 				</div>
 				<div class="btnDiv">
-					<a href="../login/login.html">Already Registered?</a>
+					<button type="button">Already Registered?</button>
 				</div>
 				<div class="orDiv">
 					<div class="or"></div>

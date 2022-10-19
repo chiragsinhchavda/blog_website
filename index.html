@@ -9,16 +9,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/responsive.css">
 	<title>Make Your Own Blog</title>
 </head>
 
 <body>
 	<header id="header">
-		<span id="menubar"></span>
-		<div class="logo">
+		<span id="menubar" onclick="showMenu()"><i class="fa-solid fa-bars"></i></span>
+		<div id="heading" class="logo">
 			<h1>Blog Application</h1>
 		</div>
-		<nav class="navbar">
+		<nav id="nav" class="navbar">
 			<li class="lists"><a href="/">HOME</a></li>
 			<li class="lists"><a href="#">CONTACT</a></li>
 			<li class="lists"><a href="./pages/login/login.html">LOGIN</a></li>
@@ -26,9 +27,7 @@
 		</nav>
 	</header>
 	<main id="main">
-		<div id="blog" class="blogDiv">
-
-		</div>
+		<div id="blog" class="blogDiv"></div>
 	</main>
 	<script src="https://kit.fontawesome.com/c84fea32b5.js" crossorigin="anonymous"></script>
 	<script src="./js/index.js"></script>

@@ -3,7 +3,9 @@
 	padding: 0px;
 }
 
-body::-webkit-scrollbar { display: none; }
+body::-webkit-scrollbar {
+	display: none;
+}
 
 body {
 	font-family: 'Josefin Sans', sans-serif;
@@ -32,7 +34,7 @@ li {
 	display: none;
 }
 
-.logo {
+#heading {
 	margin: 20px 70px;
 }
 

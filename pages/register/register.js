@@ -1,8 +1,16 @@
+const nav = document.getElementById("nav");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const cpassword = document.getElementById("cpassword");
 const msg = document.getElementById("msg");
 
+function showMenu() {
+	if (nav.style.display == "none") {
+		nav.style.display = "flex";
+	} else {
+		nav.style.display = "none";
+	}
+}
 function validateValues(event) {
 	event.preventDefault();
 	let emailSpan = document.getElementById("emailSpan");
