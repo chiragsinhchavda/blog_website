@@ -1,5 +1,6 @@
 const nav = document.getElementById("nav");
-//const locationObj = window.location;
+let registerData = localStorage.getItem("registerData");
+let loginObj = JSON.parse(registerData);
 
 function showMenu() {
 	if (nav.style.display == "none") {
@@ -9,11 +10,43 @@ function showMenu() {
 	}
 }
 
-function validateValues(event){
+function goToRegister() {
+	window.location.href = window.location.origin + `/pages/register/register.html`;
+}
+
+function validateValues(event) {
 	event.preventDefault();
-	if(localStorage.getItem("registerData")){
-		console.log('Yah!! it is available....')
+	let email = document.getElementById("email");
+	let password = document.getElementById("password");
+	let emailSpan = document.getElementById("emailSpan");
+	let passwordSpan = document.getElementById("passwordSpan");
+	const loginData = {
+		email: email.value,
+		password: password.value
 	}
-	console.log('hello');
-	console.log(location);
+	if (localStorage.getItem("registerData")) {
+		if (email.value == "" || password.value == "") {
+			emailSpan.innerText = "email field is required";
+			passwordSpan.innerText = "password field is required";
+		} else if (email.value !== loginObj.email) {
+			emailSpan.innerText = "Email address not valid";
+			passwordSpan.innerText = "";
+		} else if (password.value !== loginObj.password) {
+			emailSpan.innerText = "";
+			passwordSpan.innerText = "wrong password";
+		} else {
+			emailSpan.innerText = "";
+			passwordSpan.innerText = "";
+			window.location.href = `http://127.0.0.1:5500/index.html`;
+			localStorage.setItem("loginData", JSON.stringify(loginData));
+		}
+	} else {
+		if (email.value == "") {
+			emailSpan.innerText = "email field is required";
+			passwordSpan.innerText = "";
+		} else {
+			emailSpan.innerText = "email is not registered";
+			passwordSpan.innerText = "";
+		}
+	}
 }

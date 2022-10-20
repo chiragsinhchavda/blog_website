@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./contact.css">
+	<link rel="stylesheet" href="./responsive.css">
+	<title>Contact Me</title>
+</head>
+
+<body>
+	<header id="header">
+		<span id="menubar" onclick="showMenu()"><i class="fa-solid fa-bars"></i></span>
+		<div id="heading" class="logo">
+			<h1>Blog Application</h1>
+		</div>
+		<nav id="nav" class="navbar">
+			<li class="lists"><a href="/">HOME</a></li>
+			<li class="lists"><a href="#">CONTACT</a></li>
+			<li class="lists"><a href="./pages/login/login.html">LOGIN</a></li>
+			<li class="lists"><a href="./pages/register/register.html">REGISTER</a></li>
+		</nav>
+	</header>
+	<main id="main">
+		<form action="#" class="contactForm" onsubmit="getData(event)" name="contactForm">
+			<div class="header">
+				CONTACT ME
+			</div>
+			<div class="inputs">
+				<div class="inputDiv">
+					<input class= "input" id="fullName" type="text" value="" placeholder="Full Name">
+					<span id="nameSpan"></span>
+				</div>
+				<div class="inputDiv">
+					<input class= "input" id="email" type="text" value="" placeholder="Email">
+					<span id="emailSpan"></span>
+				</div>
+				<div class="inputDiv">
+					<input class= "input" id="mobileNumber" type="text" value="" placeholder="Mobile Number">
+				</div>
+				<div class="inputDiv">
+					<textarea id="msg" placeholder="Message" cols="21" rows="5"></textarea>
+				</div>
+				<div class="btnDiv">
+					<button type="submit">SEND</button>
+				</div>
+			</div>
+		</form>
+	</main>
+	<script src="https://kit.fontawesome.com/c84fea32b5.js" crossorigin="anonymous"></script>
+	<script src="./contact.js"></script>
+</body>
+
+</html>

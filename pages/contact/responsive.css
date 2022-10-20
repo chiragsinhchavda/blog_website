@@ -1,0 +1,46 @@
+@media only screen and (max-width:767px) {
+	#header {
+		height: 10vh;
+	}
+
+	#menubar {
+		position: absolute;
+		display: block;
+		right: 15px;
+		z-index: 1;
+	}
+
+	#menubar i {
+		font-size: 30px;
+
+	}
+
+	#heading {
+		display: none;
+		margin: 0px 20px
+	}
+
+	#nav {
+		position: absolute;
+		display: none;
+		left: 10px;
+		width: 100%;
+	}
+
+	.lists {
+		font-size: 13px;
+		padding: 9px 8px;
+	}
+
+	.input {
+		width: 100%;
+	}
+
+	.btnDiv button {
+		width: 100%;
+	}
+
+	.contactForm {
+		width: 75%;
+	}
+}

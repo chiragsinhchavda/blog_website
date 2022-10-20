@@ -3,7 +3,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const cpassword = document.getElementById("cpassword");
 const msg = document.getElementById("msg");
-
+console.log('iamregister...');
 function showMenu() {
 	if (nav.style.display == "none") {
 		nav.style.display = "flex";
@@ -11,16 +11,21 @@ function showMenu() {
 		nav.style.display = "none";
 	}
 }
+
+function goToLogin(){
+	window.location.href = window.location.origin + `/pages/login/login.html`;
+}
+
 function validateValues(event) {
 	event.preventDefault();
+	let location = window.location;
+	let loginPath = location.origin + `/pages/login/login.html`;
 	let emailSpan = document.getElementById("emailSpan");
 	let passwordSpan = document.getElementById("passwordSpan");
 	let cpasswordSpan = document.getElementById("cpasswordSpan");
 	let emailValue = email.value;
 	let passwordValue = password.value;
 	let cpasswordValue = cpassword.value;
-	let location = window.location;
-	let loginPath = location.origin + `/pages/login/login.html`;
 
 	const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
