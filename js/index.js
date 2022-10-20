@@ -14,12 +14,22 @@ function showMenu() {
 	}
 }
 
+function logout(){
+	console.log("hlloooooiamlogout,...")
+	localStorage.removeItem("loginData");
+	window.location.reload();
+}
+
 if (localStorage.getItem("loginData")) {
-	lists[2].innerHTML = `<a href="/">LOGOUT</a>`
-	lists[3].style.display = "none";
+	let login = document.getElementById("loginLink");
+	let register = document.getElementById("registerLink");
+	login.innerHTML = `<a onclick="logout()" href="/">LOGOUT</a>`;
+	register.style.display = "none";
 } else {
-	lists[2].innerHTML = `<a href="./pages/login/login.html">LOGIN</a>`
-	lists[3].innerHTML = `<a href="./pages/register/register.html">REGISTER</a>`;
+	let login = document.getElementById("loginLink");
+	let register = document.getElementById("registerLink");
+	login.innerHTML = `<a href="./pages/login/login.html">LOGIN</a>`;
+	register.innerHTML = `<a href="./pages/register/register.html">REGISTER</a>`;
 }
 
 try {

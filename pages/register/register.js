@@ -12,7 +12,7 @@ function showMenu() {
 	}
 }
 
-function goToLogin(){
+function goToLogin() {
 	window.location.href = window.location.origin + `/pages/login/login.html`;
 }
 

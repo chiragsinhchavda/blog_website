@@ -28,6 +28,7 @@ function getData(event) {
 	let message = document.getElementById("msg").value;
 	let emailSpan = document.getElementById("emailSpan");
 	let nameSpan = document.getElementById("nameSpan");
+	let success = document.getElementById("successMsg");
 
 	const contactData = {
 		name: fullName,
@@ -43,8 +44,9 @@ function getData(event) {
 		nameSpan.innerHTML = ""
 	} else {
 		localStorage.setItem("contactData", JSON.stringify(contactData));
-		emailSpan.innerHTML = ""
-		nameSpan.innerHTML = ""
+		emailSpan.innerHTML = "";
+		nameSpan.innerHTML = "";
+		success.innerHTML = "Message Sent Successfully."
 	}
 
 }
