@@ -38,10 +38,12 @@ function getData(event) {
 	}
 
 	if (fullName == "") {
-		nameSpan.innerHTML = "Name field is required."
+		nameSpan.innerHTML = "Name field is required.";
+		success.innerHTML = "";
 	} else if (email == "") {
-		emailSpan.innerHTML = "Email field is required."
-		nameSpan.innerHTML = ""
+		emailSpan.innerHTML = "Email field is required.";;
+		nameSpan.innerHTML = "";
+		success.innerHTML = "";
 	} else {
 		localStorage.setItem("contactData", JSON.stringify(contactData));
 		emailSpan.innerHTML = "";
