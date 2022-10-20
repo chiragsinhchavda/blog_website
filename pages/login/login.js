@@ -37,8 +37,8 @@ function validateValues(event) {
 		} else {
 			emailSpan.innerText = "";
 			passwordSpan.innerText = "";
-			window.location.href = `http://127.0.0.1:5500/index.html`;
 			localStorage.setItem("loginData", JSON.stringify(loginData));
+			window.location.href = window.location.origin + `/index.html`;
 		}
 	} else {
 		if (email.value == "") {
