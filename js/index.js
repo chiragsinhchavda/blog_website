@@ -58,9 +58,9 @@ async function getData() {
 		.then(async function (response) {
 			let data = await response.json();
 			let results = data.results;
-			displayData(results);
+			await displayData(results);
 		}, async function (error) {
-			displayError(error + `. please check your internet connection`);
+			await displayError(error + `. please check your internet connection`);
 		})
 }
 
