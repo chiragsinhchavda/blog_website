@@ -60,7 +60,7 @@ async function getData() {
 			let results = data.results;
 			displayData(results);
 		}, async function (error) {
-			await displayError(error + `. please check your internet connection`);
+			displayError(error + `. please check your internet connection`);
 		})
 }
 
