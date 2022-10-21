@@ -3,7 +3,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const cpassword = document.getElementById("cpassword");
 const msg = document.getElementById("msg");
-console.log('iamregister...');
+
 function showMenu() {
 	if (nav.style.display == "none") {
 		nav.style.display = "flex";
