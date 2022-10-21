@@ -64,4 +64,4 @@ async function getData() {
 		})
 }
 
-window.addEventListener("load", getData(displayData, displayError));
+window.addEventListener("load", getData());
