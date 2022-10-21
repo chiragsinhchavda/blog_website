@@ -31,7 +31,7 @@ function logout() {
 	localStorage.removeItem("loginData");
 	window.location.reload();
 }
-//callback function for success...
+
 function displayData(arr) {
 	let blogs = document.getElementById('blog');
 	arr.forEach(element => {
@@ -48,25 +48,19 @@ function displayData(arr) {
 	});
 }
 
-//callback for error...
 function displayError(error) {
 	document.getElementById("blog").innerHTML = error;
 }
 
-//callback function passed as a parameter to the getData function...
-function getData(display, err) {
+async function getData() {
 	let req = new Request(url);
-	fetch(req)
-		.then(function (response) {
-			let data = response.json();
-			data.then(
-				async getData => {
-					let results = getData.results;
-					await display(results);
-				}
-			);
+	await fetch(req)
+		.then(async function (response) {
+			let data = await response.json();
+			let results = data.results;
+			displayData(results);
 		}, async function (error) {
-			await err(error + `. please check your internet connection`);
+			await displayError(error + `. please check your internet connection`);
 		})
 }
 
