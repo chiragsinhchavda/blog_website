@@ -16,8 +16,8 @@ if (localStorage.getItem("loginData")) {
 	lists[2].innerHTML = `<a href="/">LOGOUT</a>`
 	lists[3].style.display = "none";
 } else {
-	lists[2].innerHTML = `<a href="./pages/login/login.html">LOGIN</a>`
-	lists[3].innerHTML = `<a href="./pages/register/register.html">REGISTER</a>`;
+	lists[2].innerHTML = `<a href="../login/login.html">LOGIN</a>`
+	lists[3].innerHTML = `<a href="../register/register.html">REGISTER</a>`;
 }
 
 function getData(event) {
